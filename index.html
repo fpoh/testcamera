@@ -7,7 +7,7 @@
 		<script src="resources/sap-ui-core.js"
 				id="sap-ui-bootstrap"
 				data-sap-ui-libs="sap.m"
-				data-sap-ui-resourceroots='{"view": "./"}'
+				data-sap-ui-resourceroots='{"testcamera": "./"}'
 				data-sap-ui-theme="sap_bluecrystal">
 		</script>
 		<!-- only load the mobile lib "sap.m" and the "sap_bluecrystal" theme -->
@@ -32,10 +32,7 @@
 			return false;
 		  };
 		</script>
-		
-		<script type="text/javascript" src="logon.js"></script>
-		<script type="text/javascript" src="index.js"></script>
-		
+
 		<script>
 				function getUrlParameterName(sParam)
 				{
@@ -52,24 +49,24 @@
 					return false;
 				} 
 			
-			
 				sap.ui.localResources("view");
 				var app = new sap.m.App({initialPage:"idmain"});
-			
 				
 				function startApp(context) {
 				
-		
-					var page = sap.ui.view({id:"idmain", viewName:"view.main", type:sap.ui.core.mvc.ViewType.XML  });
+					var page = sap.ui.view({id:"idmain", viewName:"testcamera.view.main", type:sap.ui.core.mvc.ViewType.XML  });
 					app.addPage(page);
 					app.placeAt("content");
-		
 				}
-				if (window.cordova || getUrlParameterName("companionbuster")) {
-					devapp.initialize();
-				}
-				else {
-					startApp();
+				
+				window.onload = function() {
+					if (window.cordova || getUrlParameterName("companionbuster")) {
+						jQuery.sap.require("testcamera.devapp");
+						testcamera.devapp.initialize();
+					}
+					else {
+						startApp();
+					}
 				}
 		</script>
 		
@@ -78,7 +75,3 @@
 		<div id="content"></div>
 	</body>
 </html>
-	
-
-
-
