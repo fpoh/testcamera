@@ -23,6 +23,7 @@
 		   the error in an alert dialog.
 		   ======================================================================*/
 		  window.onerror = function(msg, url, line) {
+		  	console.log("URL: "+url);
 			var idx = url.lastIndexOf("/");
 			if (idx > -1) {
 			  url = url.substring(idx + 1);

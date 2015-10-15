@@ -1,5 +1,4 @@
-<core:View xmlns:core="sap.ui.core" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" 
-xmlns="sap.m" controllerName="testcamera.view.main">
+<core:View xmlns:core="sap.ui.core" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="testcamera.view.main">
 	<Page title="Camera test">
 		<content>
 		    <HBox width="100%" id="__hbox0" justifyContent="SpaceBetween">
@@ -18,7 +17,7 @@ xmlns="sap.m" controllerName="testcamera.view.main">
 		    </HBox>
 		    <HBox width="100%" id="__hbox3" justifyContent="Center">
 		        <items>
-		            <Image width="200px" height="200px" id="myImage">
+		            <Image width="200px" height="200px" id="myImage" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
 		                <layoutData>
 		                    <FlexItemData alignSelf="Stretch" id="__data6"/>
 		                </layoutData>
