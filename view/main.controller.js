@@ -3,9 +3,12 @@ sap.ui.controller("view.main", {
     
     onInit : function() {
         oView = this.getView();
-        navigator.geolocation.getCurrentPosition(this.onGeoSuccess, this.onGeoError, {enableHighAccuracy:true});
     },
     
+    getPosition: function() {
+        navigator.geolocation.getCurrentPosition(this.onGeoSuccess, this.onGeoError, {enableHighAccuracy:true});
+    },
+
     onGeoSuccess : function(position) {
         oView.byId("txtLatitude").setText(position.coords.latitude);
         oView.byId("txtLongitude").setText(position.coords.longitude);
